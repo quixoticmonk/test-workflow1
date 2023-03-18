@@ -16,12 +16,12 @@ jobs:
         include:
           - eks_version: 1.22
     env:
-      cluster_version: ${{matrix.eks_version}}
+      cluster_version: "${{matrix.eks_version}}/./-"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: setup eksctl
         run: |
-          echo "${$cluster_version/./-}"
+          echo "$cluster_version"
 
 

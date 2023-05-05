@@ -3,6 +3,10 @@ name: Cluster Upgrade tests
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
   create-cluster:
